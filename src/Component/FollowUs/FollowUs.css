@@ -1,0 +1,95 @@
+/* src/components/FollowUs/FollowUs.css */
+.follow-section {
+  background-color: #b7a36f;
+  padding: 60px 0;
+  text-align: center;
+  font-family: "Rye", cursive;
+}
+
+.follow-title {
+  font-size: 32px;
+  /* font-weight: bold; */
+  color: #000;
+  margin-bottom: 40px;
+   font-family: "Rye", cursive;
+}
+
+.slider-container {
+     overflow: hidden;
+    /* width: 80%; */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* track holds pages (each page = 100% width) */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* each page takes full container width */
+.slide-page {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 10px;
+  max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* each image inside page */
+.slide-item {
+  box-sizing: border-box;
+  padding: 6px;
+}
+
+.slide-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #f3f3f3;
+  display: block;
+}
+
+/* Dots */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.dot.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+
+/* optional: adjust spacing on small devices */
+@media (max-width: 1024px) {
+  .follow-title {
+    font-size: 28px;
+     font-family: "Rye", cursive;
+  }
+}
+
+@media (max-width: 600px) {
+  .follow-title {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,150 @@
+.navbar {
+  width: 100%;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo Section */
+.navbar-logo-section {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-logo {
+  height: 90px;
+  margin-top: 30px;
+}
+
+/* Left & Right for Desktop */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c7a64a;
+}
+
+/* Visit Button */
+.visit-btn {
+  margin-left: 30px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.visit-btn:hover {
+  background-color: #c7a64a;
+  color: #ffffff;
+}
+
+/* Hamburger Menu (Hidden in Desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 2000;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 20px 0;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.mobile-menu.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li {
+  margin: 15px 0;
+}
+
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mobile-btn {
+  margin-top: 10px;
+}
+
+/* ---------- Responsive Styles ---------- */
+@media (max-width: 900px) {
+  .navbar-left,
+  .navbar-right {
+    display: none;
+  }
+
+  .navbar-logo-section {
+    position: static;
+    transform: none;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
