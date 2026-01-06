@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PreHeader from "./Component/Header/PreHeader";
 import Navbar from "./Component/Header/Navbar";
-import './App.css'
+import "./App.css";
 
 import Home from "./Pages/Home";
 import Brewery from "./Pages/Brewery";
@@ -12,10 +12,10 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/Rabbit-Foot">
       <PreHeader />
       <Navbar />
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/brewery" element={<Brewery />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
